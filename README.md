@@ -1,5 +1,13 @@
 1) Create maven project
 2) Add maven dependency
+```xml
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+```
 3) Create HelloServlet extends HttpServlet
 4) Override GET method
 5) Create 'WEB-INF/web.xml'
