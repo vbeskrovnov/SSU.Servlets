@@ -7,10 +7,9 @@ Servlets:
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
-            <scope>provided</scope>
         </dependency>
 ```
-3) Create HelloServlet extends HttpServlet
+3) Create `HelloServlet extends HttpServlet`
 4) Override GET method
 5) Create 'WEB-INF/web.xml'
 ```xml
@@ -22,7 +21,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
     <servlet>
         <servlet-name>Hello servlet</servlet-name>
-        <servlet-class>com.beskrovnov.HelloServlet</servlet-class>
+        <servlet-class><Your Servlet location></servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -48,8 +47,8 @@ Your project will look like:
 │                   web.xml
 ```
 6) Download tomcat from http://mirror.linux-ia64.org/apache/tomcat/tomcat-9/v9.0.5/bin/apache-tomcat-9.0.5.zip
-7) Build project
-8) Create structure in tomcat webapps directory
+7) Build project. After project building, `target` directory will appear. It has all build artifacts.
+8) Create following structure in tomcat `webapps` directory
 ```
 \--Tomcat
      \--webapps
@@ -62,7 +61,7 @@ Your project will look like:
                                    \--<YourClass>.class
 ```
 
-8) Run tomcat `/bin/startup.bin`
+8) Run tomcat `<tomcatDirectory>/bin/startup.bin`
 5) Open `localhost:8080/<App Name>//hello`
 
 
@@ -110,7 +109,7 @@ Your project will look like:
    ```
 2) Build project
 3) Create structure in tomcat webapps directory
-   ```
+```
    \--Tomcat
         \--webapps
              \--<App Name>
@@ -121,6 +120,6 @@ Your project will look like:
                             \--com
                                  \--<YourPackage>
                                       \--<YourClass>.class
-   ```
-4) Run tomcat `/bin/startup.bin`
+```
+4) Run tomcat `<tomcatDirectory>/bin/startup.bin`
 5) Open `localhost:8080/<App Name>/<YourJspName>.jsp`
