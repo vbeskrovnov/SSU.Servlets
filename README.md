@@ -31,6 +31,22 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
     </servlet-mapping>
 </web-app>
 ```
+Your project will look like:
+```
+.
+│   pom.xml
+│   README.md
+├───src
+│   └───main
+│       ├───java
+│       │   └───com
+│       │       └───beskrovnov
+│       │               HelloServlet.java
+│       │
+│       └───webapp
+│           └───WEB-INF
+│                   web.xml
+```
 6) Download tomcat from http://mirror.linux-ia64.org/apache/tomcat/tomcat-9/v9.0.5/bin/apache-tomcat-9.0.5.zip
 7) Build project
 8) Create structure in tomcat webapps directory
@@ -73,6 +89,25 @@ JSP:
 </body>
 </html>
 ```
+Your project will look like:
+   ```
+    .
+    │   pom.xml
+    │   README.md
+    │
+    ├───src
+    │   └───main
+    │       ├───java
+    │       │   └───com
+    │       │       └───beskrovnov
+    │       │               HelloServlet.java
+    │       │
+    │       └───webapp
+    │           │   first.jsp
+    │           │
+    │           └───WEB-INF
+    │                   web.xml
+   ```
 2) Build project
 3) Create structure in tomcat webapps directory
    ```
