@@ -1,3 +1,5 @@
+Servlets:
+---------
 1) Create maven project
 2) Add maven dependency
 ```xml
@@ -30,7 +32,8 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 </web-app>
 ```
 6) Download tomcat from http://mirror.linux-ia64.org/apache/tomcat/tomcat-9/v9.0.5/bin/apache-tomcat-9.0.5.zip
-7) Create structure
+7) Build project
+8) Create structure in tomcat webapps directory
 ```
 \--Tomcat
      \--webapps
@@ -44,3 +47,45 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 ```
 
 8) Run tomcat `/bin/startup.bin`
+5) Open `localhost:8080/<App Name>//hello`
+
+
+JSP:
+----
+1) Create JSP in `src/main/webapp/first.jsp`, with:
+```xml
+<html>
+<head><title>First JSP</title></head>
+<body>
+  <%
+    double num = Math.random();
+    if (num > 0.95) {
+  %>
+      <h2>You'll have a luck day!</h2><p>(<%= num %>)</p>
+  <%
+    } else {
+  %>
+      <h2>Well, life goes on ... </h2><p>(<%= num %>)</p>
+  <%
+    }
+  %>
+  <a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>
+</body>
+</html>
+```
+2) Build project
+3) Create structure in tomcat webapps directory
+   ```
+   \--Tomcat
+        \--webapps
+             \--<App Name>
+                  \--<YourJspName>.jsp
+                  \--WEB-INF
+                      \--web.xml 
+                       \--classes
+                            \--com
+                                 \--<YourPackage>
+                                      \--<YourClass>.class
+   ```
+4) Run tomcat `/bin/startup.bin`
+5) Open `localhost:8080/<App Name>/<YourJspName>.jsp`
