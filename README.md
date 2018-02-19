@@ -1,6 +1,7 @@
 Servlets:
 ---------
 1) Create maven project
+
 2) Add maven dependency
 ```xml
         <dependency>
@@ -9,8 +10,11 @@ Servlets:
             <version>2.5</version>
         </dependency>
 ```
+
 3) Create `HelloServlet extends HttpServlet`
+
 4) Override GET method
+
 5) Create 'WEB-INF/web.xml'
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -46,8 +50,11 @@ Your project will look like:
 │           └───WEB-INF
 │                   web.xml
 ```
+
 6) Download tomcat from http://mirror.linux-ia64.org/apache/tomcat/tomcat-9/v9.0.5/bin/apache-tomcat-9.0.5.zip
+
 7) Build project. After project building, `target` directory will appear. It has all build artifacts.
+
 8) Create following structure in tomcat `webapps` directory
 ```
 \--Tomcat
@@ -61,8 +68,9 @@ Your project will look like:
                                    \--<YourClass>.class
 ```
 
-8) Run tomcat `<tomcatDirectory>/bin/startup.bin`
-5) Open `localhost:8080/<App Name>//hello`
+9) Run tomcat `<tomcatDirectory>/bin/startup.bin`
+
+10) Open `localhost:8080/<App Name>/hello`
 
 
 JSP:
@@ -107,7 +115,9 @@ Your project will look like:
     │           └───WEB-INF
     │                   web.xml
    ```
+   
 2) Build project
+
 3) Create structure in tomcat webapps directory
 ```
    \--Tomcat
@@ -121,5 +131,7 @@ Your project will look like:
                                  \--<YourPackage>
                                       \--<YourClass>.class
 ```
+
 4) Run tomcat `<tomcatDirectory>/bin/startup.bin`
+
 5) Open `localhost:8080/<App Name>/<YourJspName>.jsp`
